@@ -4,6 +4,9 @@ html {
 	font-size: 14px;
 	font-weight: 300;
 	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 	line-height: 160%;
 	/*width: 100%;
@@ -21,6 +24,10 @@ ul,p, body,div {
 }
 
 * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
 	box-sizing: border-box;
 }
 .menu {
@@ -148,17 +155,23 @@ a {
 	margin: 30px 20px 0;
 	height: 46px;
 }
+.global-header__menu--logo {
+	height: inherit;
+}
 .logo {
 	width: 100%;
 	max-width: 40px;
 	height: auto;
 }
-.logo-text {
-	padding: 0 5px;
-}
+/*.logo-text {
+	
+}*/
 
 .logo__link {
-	display: inline-block;
+	display: flex;
+	flex-flow: row;
+    flex-wrap: nowrap;
+    align-items: center;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
@@ -187,7 +200,7 @@ a {
 }
 
 .login {
-	background: rgba(255,255,255,0.15);
+	background: #EC7770 rgba(255,255,255,0.15);
     border-radius: 25px;
     transition: .3s;
     padding: 12px 20px;
@@ -200,14 +213,7 @@ a {
     transform: translateY(-1px);
 }
 
-/*.global-header__menu--nav, 
-.global-header__menu--logo {
-	float: left;
-	height: 46px;
-}
-.global-header__menu--signup {
-	float: right;	
-}*/
+
 .global-header__text {
 	font-weight: 900;
 	color: #fff;
@@ -265,7 +271,7 @@ form {
 	position: relative;
     z-index: 9998;
     top: -50px;
-    left: -0px;
+    left: -0;
     text-align: center;
 }
     
@@ -287,9 +293,6 @@ input[type="text"]:focus {
 ::-moz-input-placeholder {
    text-align: center;
 }
-
-
-
 
 .feature-images {
     background-color: rgba(0,0,0, 1);
@@ -330,6 +333,12 @@ input[type="text"]:focus {
     background-size:cover;
     background-position: 45% 100%;
     opacity: .5;
+
+    -webkit-transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+    -moz-transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+    -ms-transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+    -o-transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+    transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
 }
 .img--jos {
 	position: relative;
@@ -338,6 +347,12 @@ input[type="text"]:focus {
     background-size:cover;
     background-position: 56% 100%;
     opacity: .5;
+
+    -webkit-transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+    -moz-transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+    -ms-transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+    -o-transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+    transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
 }
 .img--abuja {
 	position: relative;
@@ -345,7 +360,13 @@ input[type="text"]:focus {
     background-repeat: no-repeat;
     background-size:cover;
     background-position: 52% 100%;
-    opacity: .5;   
+    opacity: .5;  
+
+    -webkit-transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+    -moz-transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+    -ms-transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+    -o-transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+    transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1); 
 }
 
 
@@ -406,10 +427,10 @@ input[type="text"]:focus {
 	text-transform: uppercase;
 }
 
-.page-section-header__text {
+.page-section-header__description {
 	font-size: 1.7rem;
     font-weight: 400;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 
@@ -548,7 +569,8 @@ input[type="text"]:focus {
 
 @media (max-width: 699px) {
 	.grid__col--4 {
-		width: 50%;
+		/*width: 50%;*/
+		width: 100%
 	}
 
 	.img {
