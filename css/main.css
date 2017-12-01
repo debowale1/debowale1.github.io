@@ -43,6 +43,11 @@ a {
 			Utils
 -----------------------------------*/
 
+.sr-only {
+	position: absolute; 
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
 
 
 /*---------------------------------
@@ -200,7 +205,7 @@ a {
 }
 
 .login {
-	background: #EC7770 rgba(255,255,255,0.15);
+	background: rgba(255,255,255,0.15);
     border-radius: 25px;
     transition: .3s;
     padding: 12px 20px;
@@ -289,10 +294,10 @@ input[type="text"]:focus {
 	outline: none;
 }
 
-::-webkit-input-placeholder,
-::-moz-input-placeholder {
+/*::-webkit-input-placeholder, 
+input-placeholder {
    text-align: center;
-}
+}*/
 
 .feature-images {
     background-color: rgba(0,0,0, 1);
@@ -510,7 +515,7 @@ input[type="text"]:focus {
     color: #fdb94e;
 }
 
-.content h1 {
+.content > .text-description {
 	margin-left: 47%;
     color: #fff;
     font-size: 45px;
@@ -557,7 +562,7 @@ input[type="text"]:focus {
 	text-decoration: none;
 }
 .nav-mobile a:hover {
-	color: #569E3D; /*#79D858);*/
+	color: #569E3D;
 	transform: translateY(-1px);
 }
 
@@ -566,20 +571,8 @@ input[type="text"]:focus {
 			Media Rules for mobile layout
 --------------------------------------------------**/
 
-
-@media (max-width: 699px) {
-	.grid__col--4 {
-		/*width: 50%;*/
-		width: 100%
-	}
-
-	.img {
-		margin-bottom: 30px;
-	}
-}
-
-@media (max-width: 560px) {
-
+@media (max-width: 760px) {
+	/*560*/
 	.container-md {
 		padding: 0 30px;
 	}
@@ -599,7 +592,7 @@ input[type="text"]:focus {
 		margin-bottom: 30px;
 	}
 
-	.text-intro, .content h1 {
+	.text-intro, .content > .text-description {
 		margin-left: 20px;
 	}
 
@@ -611,11 +604,8 @@ input[type="text"]:focus {
 	.hamburger {
 		display: block;
 	}
-}
 
-@media (max-width: 768px){
-	.text-intro, 
-	.content h1 {
-		margin-left: 20px;
+	form {
+		margin: 0 5%;
 	}
 }

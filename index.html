@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Arinka</title>
 	<!-- catamaran font -->
 	<link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
@@ -49,6 +49,7 @@
 					</div>
 
 					<div class="hamburger" tabindex="6">
+						<p class="sr-only">mobile menu</p>
 	                    <span class="first-child"></span>
 	                    <span></span>
 	                    <span class="last-child"></span>
@@ -58,7 +59,7 @@
 
 			</div>
 
-			<section class="global-header__hero" tabindex="">
+			<section class="global-header__hero">
 	    		<div class="container-sm">
 	    			<h1 class="global-header__hero--title" tabindex="7">Discover the best places to travel to in Nigeria</h1>
 
@@ -68,7 +69,7 @@
 		</header>	
 
 		<form action="#" tabindex="9">
-			<input type="text" class="search-box" placeholder="eg. educational, outdoors, relaxed">
+			<input id="search" type="text" class="search-box" value="eg. educational, outdoors, relaxed">
 		</form>			
 
 		<section id="moods" class="page-section page-section--about">
@@ -128,7 +129,7 @@
 				<div class="content">
 					<p class="text-intro">on the blog</p>
 					
-					<h1 class="">Hanging Out In Borno</h1>
+					<h2 class="text-description">Hanging Out In Borno</h2>
 				</div>
 			</section>
 
@@ -152,5 +153,12 @@
 	<script type="text/javascript" src="scripts/jquery.min.js"></script>
 	<script type="text/javascript" src="scripts/slideout.min.js"></script>
 	<script type="text/javascript" src="scripts/main.js"></script>
+	<script>
+		let search = $('#search');
+		search.css('text-align', 'center');
+		search.click(function(){
+			search.removeAttr('value');		
+		});	
+	</script>
 </body>
 </html>
