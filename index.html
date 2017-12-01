@@ -158,6 +158,8 @@
 		search.css('text-align', 'center');
 		search.click(function(){
 			search.removeAttr('value');		
+		}).blur(function(){
+			search.attr('value', 'eg. educational, outdoors, relaxed');
 		});	
 	</script>
 </body>
